@@ -62,7 +62,7 @@ var d  ;
             service: 'gmail',
             auth: {
               user: 'saifullahyasir17@gmail.com',
-              pass: 'risay565'
+              pass: ''
             }
           });
           
@@ -341,7 +341,7 @@ router.post('/forget',async (req,res)=>{
             service: 'gmail',
             auth: {
               user: 'saifullahyasir17@gmail.com',
-              pass: 'risay565'
+              pass: ''
             }
           });
 var random_numb = Math.floor(Math.random() * (10000 - 6000 + 1) + 6000)
