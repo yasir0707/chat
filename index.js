@@ -2,7 +2,10 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var fileUpload = require('express-fileupload');
-
+var initializeApp = require('firebase/app')
+var getAnalytics = require('firebase/analytics')
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 // var busboy = require('connect-busboy');
 var app =express();
 var Register = require('./routes/Register')
@@ -13,6 +16,7 @@ var role = require('./routes/role');
 var agent = require('./routes/agent');
 var link_r = require('./routes/link');
 var graph = require('./routes/graph')
+var config = require('./config')
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -28,6 +32,7 @@ app.use(function(req, res, next) {
     res.header("Content-Type","application/json");
    next();
     });
+   
 // Register 
 app.use('/register',Register)
 app.all('/*', function(req, res, next) {
@@ -57,13 +62,13 @@ app.use('/link',link_r)
 // Graph
 app.use('/graph',graph)
 
-app.listen(1111, (err)=>{
+app.listen(config.port, (err)=>{
     if(err){
 
         console.log('Error at server 1111')
     }
     else{
-        console.log('Server at 1111')
+        console.log('Server at '+config.port)
     }
 })
 

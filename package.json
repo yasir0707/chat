@@ -17,6 +17,7 @@
     "dateformat": "^5.0.1",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
+    "firebase": "^9.1.3",
     "fs": "0.0.1-security",
     "geoip-lite": "^1.4.2",
     "gridfs-stream": "^1.1.1",
