@@ -51,7 +51,7 @@ router.post('/add',async(req,res)=>{
             service: 'gmail',
             auth: {
               user: 'saifullahyasir17@gmail.com',
-              pass: 'risay565'
+              pass: ''
             }
           });
           
